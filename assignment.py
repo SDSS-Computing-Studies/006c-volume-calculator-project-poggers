@@ -11,7 +11,7 @@ def title():
     # output parameters: None
     # Author: Catrina
     # Modified:
-    print("\n=================================")
+    print("\n\n=================================")
     print("Welcome to the Volume Calculator! \n=================================")
     print("\nThis program was created by the Poggers!\n")
     return None
@@ -31,18 +31,15 @@ def instructions():
         print("Step 4: The program will run and you will be given the area of your shape.")
         print("Do you wish to continue?")
         x = input("Yes or No: " ).strip()
-        if x == "No":
-            y = input("\nWould you like to replay the instructions? ")
+        if x is "No":
+            y = input("Would you like to replay the instructions?")
             if y is "Yes":
-                print("\n")
                 continue
-            else:
-                print("\n\n")
-                break
-        elif x == "Yes":
-            print("\n\n")
+        else:
             break
-     
+
+                
+                
     return None
 
 def getParams():
@@ -96,8 +93,10 @@ def getInputs(prompts):
         for x in range (2):
            measurments.append(int(input(prompts[x+1])))
     print(measurments)
-    return measurments
-    
+    return measurments,prompts
+
+def calc(x):
+
 def cone(x):
     return math.pi * (x[0]**2) * (x[1]/3)
 
@@ -111,7 +110,7 @@ def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
-    title()
-    instructions()
+    #title()
+    #instructions()
     getInputs(getParams())
 main()
