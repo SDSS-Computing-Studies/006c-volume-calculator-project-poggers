@@ -11,7 +11,7 @@ def title():
     # output parameters: None
     # Author: Catrina
     # Modified:
-    print("\n\n=================================")
+    print("\n=================================")
     print("Welcome to the Volume Calculator! \n=================================")
     print("\nThis program was created by the Poggers!\n")
     return None
@@ -31,15 +31,18 @@ def instructions():
         print("Step 4: The program will run and you will be given the area of your shape.")
         print("Do you wish to continue?")
         x = input("Yes or No: " ).strip()
-        if x is "No":
-            y = input("Would you like to replay the instructions?")
+        if x == "No":
+            y = input("\nWould you like to replay the instructions? ")
             if y is "Yes":
+                print("\n")
                 continue
-        else:
+            else:
+                print("\n\n")
+                break
+        elif x == "Yes":
+            print("\n\n")
             break
-
-                
-                
+     
     return None
 
 def getParams():
