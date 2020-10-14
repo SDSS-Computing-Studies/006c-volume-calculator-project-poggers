@@ -29,15 +29,14 @@ def instructions():
         print("Step 2: You will be prompted to enter the necessary parameters for the shape. ")
         print("Step 3: You will be asked to confirm your measurements.")
         print("Step 4: The program will run and you will be given the area of your shape.")
-        x = input("Do you wish to continue? Yes or No").strip()
-        if x == "Yes" or x == "yes":
-            False
-        elif x == "No" or x=="no":
+        print("Do you wish to continue?")
+        x = input("Yes or No: " ).strip()
+        if x is "No":
             y = input("Would you like to replay the instructions?")
-            if y == "Yes" or y == "yes":
-                True
-            else:
-                False 
+            if y is "Yes":
+                continue
+        else:
+            break
 
                 
                 
