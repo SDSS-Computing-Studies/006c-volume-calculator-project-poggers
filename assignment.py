@@ -51,5 +51,5 @@ def main():
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
     title()
-
-intructions()
+    instructions()
+main()
