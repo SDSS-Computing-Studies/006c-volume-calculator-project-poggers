@@ -2,23 +2,28 @@
 # Volume Calculator
 # Feel free to rename your variables
 
-import os
 
 def title():
     # Will display a title screen
     # input parameters: none needed
     # output parameters: None
-    # Author:
+    # Author: Catrina
     # Modified:
-    
+    print("\n\n=================================")
+    print("Welcome to the Volume Calculator! \n=================================")
+    print("\nThis program was created by the Poggers!")
     return None
 
 def instructions():
     # Will display instructions
     # input parameters: none needed
     # output parameters: None
-    # Author:
+    # Author: Catrina
     # Modified:
+    print("This program has been designed to calculate the volume of your desired shape.")
+    print("To use this calculator, you will be directed to choose a shape. Then you will be prompted")
+    print("to enter the necessary parameters for the shape. You will be asked to confirm your measurements.")
+    print("Then the program will run and you will be given the area of your shape.")
     return None
 
 def getParams(shape):
@@ -59,4 +64,4 @@ def main():
     title()
     instructions()
 
-main()
+intructions()
