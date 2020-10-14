@@ -2,7 +2,6 @@
 # Volume Calculator
 # Feel free to rename your variables
 
-import os
 
 def title():
     # Will display a title screen
