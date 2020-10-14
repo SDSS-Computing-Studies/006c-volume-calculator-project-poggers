@@ -1,6 +1,7 @@
 #!python3
 # Volume Calculator
 # Feel free to rename your variables
+
 import math
 import os
 
@@ -34,17 +35,17 @@ def getParams(shape):
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: Kenji
-    if shape == cone:
+    if shape == "cone":
         return [1,"Enter the radius","Enter the height"]
-    elif shape == pyramid:
+    elif shape == "pyramid":
         return [2,"Enter the length","Enter the width","Enter the height"]
-    elif shape == cube:
+    elif shape == "cube":
         return [3,"Enter the side length"]
-    elif shape == rectangularPrism:
+    elif shape == "rectangularPrism":
         return [4,"Enter the width","Enter the height","Enter the length"]
-    elif shape == triangularPrism:
+    elif shape == "triangularPrism":
         return [5,"Enter base side A","Enter base side B","Enter base side C","Enter the height"]
-    elif shape == cylinder:
+    elif shape == "cylinder":
         return [6,"Enter the radius","Enter the height"]
     else:
         return [0,"Invalid shape, try again"]
@@ -95,8 +96,4 @@ def main():
     title()
     instructions()
 
-<<<<<<< HEAD
 main()
-=======
-main()
->>>>>>> 39d57f0ab5984fd508a338a9e65a3a6199364733
