@@ -50,18 +50,19 @@ def getParams():
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: Kenji
+    print("Possible shapes: cone, pyramid, cube, rectangular prism, triangular prism, cylinder\nMake sure everything is spelled correctly!")
     shape = input("Enter a shape: ")
-    if shape == "cone":
+    if shape == "Cone":
         return [1,"Enter the radius: ","Enter the height: "]
-    elif shape == "pyramid":
+    elif shape == "Pyramid":
         return [2,"Enter the length: ","Enter the width: ","Enter the height: "]
-    elif shape == "cube":
+    elif shape == "Cube":
         return [3,"Enter the side length: "]
-    elif shape == "rectangularPrism":
+    elif shape == "Rectangular Prism":
         return [4,"Enter the width: ","Enter the height: ","Enter the length: "]
-    elif shape == "triangularPrism":
+    elif shape == "Triangular Prism":
         return [5,"Enter base side A: ","Enter base side B: ","Enter base side C: ","Enter the height: "]
-    elif shape == "cylinder":
+    elif shape == "Cylinder":
         return [6,"Enter the radius: ","Enter the height: "]
     else:
         return [0,"Invalid shape, try again"]
@@ -76,43 +77,39 @@ def getInputs(prompts):
     if prompts[0]==1:
         for x in range (3):
             measurments.append(int(input(prompts[x+1])))
-            print("\n")
     elif  prompts[0]==2:
         for x in range (3):
             measurments[x+1] = int(input())
-            print("\n")
     elif  prompts[0]==3:
         for x in range (1):
             measurments[x+1] = int(input())
-            print("\n")
     elif  prompts[0]==4:
         for x in range (3):
             measurments[x+1] = int(input())
-            print("\n")
     elif  prompts[0]==5:
         for x in range (4):
             measurments[x+1] = int(input())
-            print("\n")
     elif  prompts[0]==6:
         for x in range (2):
             measurments[x+1] = int(input())
-            print("\n")
     print(measurments)
     return measurments
     
+def cone(x):
+    return math.pi * (x[0]**2) * (x[1]/3)
 
-def cube(s):
-    return s**3
+def cube(x):
+    return x**3
 
-def Cylinder(r,h):
-    return math.pi*(r**2)*h
+def Cylinder(x):
+    return math.pi*(x[0]**2)*x[1]
 
 def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
-    title()
-    instructions()
+    #title()
+    #instructions()
     getInputs(getParams())
 
 main()
