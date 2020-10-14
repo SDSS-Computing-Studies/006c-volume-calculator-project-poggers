@@ -22,20 +22,24 @@ def instructions():
     # output parameters: None
     # Author: Catrina
     # Modified:
-    print("This program has been designed to calculate the volume of your desired shape.")
-    print("To use this calculator you will:")
-    print("Step 1: You will choose a shape.")
-    print("Step 2: You will be prompted to enter the necessary parameters for the shape. ")
-    print("Step 3: You will be asked to confirm your measurements.")
-    print("Step 4: The program will run and you will be given the area of your shape.")
-    x = input("Do you wish to continue? Yes or No").strip()
+    while True:
+        print("This program has been designed to calculate the volume of your desired shape.")
+        print("To use this calculator you will:")
+        print("Step 1: You will choose a shape.")
+        print("Step 2: You will be prompted to enter the necessary parameters for the shape. ")
+        print("Step 3: You will be asked to confirm your measurements.")
+        print("Step 4: The program will run and you will be given the area of your shape.")
+        x = input("Do you wish to continue? Yes or No").strip()
         if x == "Yes" or x == "yes":
-            continue
-        if x = "No" or x == "no":
+            False
+        elif x == "No" or x=="no":
             y = input("Would you like to replay the instructions?")
-            if y == "No" or "no":
-                continue
+            if y == "Yes" or y == "yes":
+                True
             else:
+                False 
+
+                
                 
     return None
 
