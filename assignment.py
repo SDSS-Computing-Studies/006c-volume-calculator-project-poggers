@@ -72,31 +72,26 @@ def getInputs(prompts):
     # It will turn all the input data into a list
     # input parameter: list containing the prompts/questions
     # output parameter: return a list containing all the measurements of the shape
+    #Author: Peter
     measurments = []
     if prompts[0]==1:
-        for x in range (3):
+        for x in range (2):
             measurments.append(int(input(prompts[x+1])))
-            print("\n")
     elif  prompts[0]==2:
         for x in range (3):
-            measurments[x+1] = int(input())
-            print("\n")
+           measurments.append(int(input(prompts[x+1])))
     elif  prompts[0]==3:
         for x in range (1):
-            measurments[x+1] = int(input())
-            print("\n")
+           measurments.append(int(input(prompts[x+1])))
     elif  prompts[0]==4:
         for x in range (3):
-            measurments[x+1] = int(input())
-            print("\n")
+            measurments.append(int(input(prompts[x+1])))
     elif  prompts[0]==5:
         for x in range (4):
-            measurments[x+1] = int(input())
-            print("\n")
+           measurments.append(int(input(prompts[x+1])))
     elif  prompts[0]==6:
         for x in range (2):
-            measurments[x+1] = int(input())
-            print("\n")
+           measurments.append(int(input(prompts[x+1])))
     print(measurments)
     return measurments
     
@@ -111,8 +106,7 @@ def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
-    title()
-    instructions()
+    #title()
+    #instructions()
     getInputs(getParams())
-
 main()
