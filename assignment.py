@@ -2,6 +2,7 @@
 # Volume Calculator
 # Feel free to rename your variables
 
+import os
 
 def title():
     # Will display a title screen
@@ -45,5 +46,7 @@ def main():
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
     title()
+    os.system("cls")
+    instructions()
 
 main()
