@@ -66,4 +66,4 @@ def main():
     title()
     instructions()
 
-intructions()
+main()
