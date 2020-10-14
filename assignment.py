@@ -30,7 +30,7 @@ def instructions():
         print("Step 3: You will be asked to confirm your measurements.")
         print("Step 4: The program will run and you will be given the area of your shape.")
         print("Do you wish to continue?")
-        x = input("Yes or No: " ).strip
+        x = input("Yes or No: " ).strip()
         if x is "No":
             y = input("Would you like to replay the instructions?")
             if y is "Yes":
@@ -49,16 +49,18 @@ def getParams():
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: Kenji
-    shape = input("Enter a shape: ")
+    #Modifier: Catrina
+    print("Shape Options: cone, cube, cylinder, retangular rism, pyramid, sphere, triangular prism")
+    shape = input("Enter a shape: ").strip()
     if shape == "cone":
         return [1,"Enter the radius: ","Enter the height: "]
     elif shape == "pyramid":
         return [2,"Enter the length: ","Enter the width: ","Enter the height: "]
     elif shape == "cube":
         return [3,"Enter the side length: "]
-    elif shape == "rectangularPrism":
+    elif shape == "rectangular prism":
         return [4,"Enter the width: ","Enter the height: ","Enter the length: "]
-    elif shape == "triangularPrism":
+    elif shape == "triangular prism":
         return [5,"Enter base side A: ","Enter base side B: ","Enter base side C: ","Enter the height: "]
     elif shape == "cylinder":
         return [6,"Enter the radius: ","Enter the height: "]
