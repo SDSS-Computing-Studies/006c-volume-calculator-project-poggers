@@ -46,7 +46,5 @@ def main():
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
     title()
-    os.system("cls")
-    instructions()
 
 main()
