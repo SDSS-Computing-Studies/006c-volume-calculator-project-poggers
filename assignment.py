@@ -95,4 +95,8 @@ def main():
     title()
     instructions()
 
+<<<<<<< HEAD
 main()
+=======
+main()
+>>>>>>> 39d57f0ab5984fd508a338a9e65a3a6199364733
