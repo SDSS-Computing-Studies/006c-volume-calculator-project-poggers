@@ -29,15 +29,14 @@ def instructions():
         print("Step 2: You will be prompted to enter the necessary parameters for the shape. ")
         print("Step 3: You will be asked to confirm your measurements.")
         print("Step 4: The program will run and you will be given the area of your shape.")
-        x = input("Do you wish to continue? Yes or No").strip()
-        if x == "Yes" or x == "yes":
-            False
-        elif x == "No" or x=="no":
+        print("Do you wish to continue?")
+        x = input("Yes or No: " ).strip()
+        if x is "No":
             y = input("Would you like to replay the instructions?")
-            if y == "Yes" or y == "yes":
-                True
-            else:
-                False 
+            if y is "Yes":
+                continue
+        else:
+            break
 
                 
                 
@@ -50,18 +49,19 @@ def getParams():
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: Kenji
+    print("Possible shapes: cone, pyramid, cube, rectangular prism, triangular prism, cylinder\nMake sure everything is spelled correctly!")
     shape = input("Enter a shape: ")
-    if shape == "cone":
+    if shape == "Cone":
         return [1,"Enter the radius: ","Enter the height: "]
-    elif shape == "pyramid":
+    elif shape == "Pyramid":
         return [2,"Enter the length: ","Enter the width: ","Enter the height: "]
-    elif shape == "cube":
+    elif shape == "Cube":
         return [3,"Enter the side length: "]
-    elif shape == "rectangularPrism":
+    elif shape == "Rectangular Prism":
         return [4,"Enter the width: ","Enter the height: ","Enter the length: "]
-    elif shape == "triangularPrism":
+    elif shape == "Triangular Prism":
         return [5,"Enter base side A: ","Enter base side B: ","Enter base side C: ","Enter the height: "]
-    elif shape == "cylinder":
+    elif shape == "Cylinder":
         return [6,"Enter the radius: ","Enter the height: "]
     else:
         return [0,"Invalid shape, try again"]
@@ -95,12 +95,14 @@ def getInputs(prompts):
     print(measurments)
     return measurments
     
+def cone(x):
+    return math.pi * (x[0]**2) * (x[1]/3)
 
-def cube(s):
-    return s**3
+def cube(x):
+    return x**3
 
-def Cylinder(r,h):
-    return math.pi*(r**2)*h
+def Cylinder(x):
+    return math.pi*(x[0]**2)*x[1]
 
 def main():
     # main block of code that will run your program and control program flow
