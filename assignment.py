@@ -2,22 +2,29 @@
 # Volume Calculator
 # Feel free to rename your variables
 import math
+import os
 
 def title():
     # Will display a title screen
     # input parameters: none needed
     # output parameters: None
-    # Author:
+    # Author: Catrina
     # Modified:
-    
+    print("\n\n=================================")
+    print("Welcome to the Volume Calculator! \n=================================")
+    print("\nThis program was created by the Poggers!")
     return None
 
 def instructions():
     # Will display instructions
     # input parameters: none needed
     # output parameters: None
-    # Author:
+    # Author: Catrina
     # Modified:
+    print("This program has been designed to calculate the volume of your desired shape.")
+    print("To use this calculator, you will be directed to choose a shape. Then you will be prompted")
+    print("to enter the necessary parameters for the shape. You will be asked to confirm your measurements.")
+    print("Then the program will run and you will be given the area of your shape.")
     return None
 
 def getParams(shape):
@@ -26,9 +33,21 @@ def getParams(shape):
     # input parameter: string 
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
-    prompts
-
-    return prompts
+    # Author: Kenji
+    if shape == cone:
+        return [1,"Enter the radius","Enter the height"]
+    elif shape == pyramid:
+        return [2,"Enter the length","Enter the width","Enter the height"]
+    elif shape == cube:
+        return [3,"Enter the side length"]
+    elif shape == rectangularPrism:
+        return [4,"Enter the width","Enter the height","Enter the length"]
+    elif shape == triangularPrism:
+        return [5,"Enter base side A","Enter base side B","Enter base side C","Enter the height"]
+    elif shape == cylinder:
+        return [6,"Enter the radius","Enter the height"]
+    else:
+        return [0,"Invalid shape, try again"]
 
 def getInputs(prompts):
     # Will prompt the user for inputs for the shape they.
@@ -74,5 +93,6 @@ def main():
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
     title()
+    instructions()
 
 main()
