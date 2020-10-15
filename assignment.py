@@ -52,21 +52,23 @@ def getParams():
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: Kenji
     print("\nPossible shapes: cone, pyramid, cube, rectangular prism, triangular prism, cylinder\nMake sure everything is spelled correctly!")
-    shape = input("Enter a shape: ")
-    if shape == "Cone" or "cone":
+    shape = input("Enter a shape: ").strip()
+    print(shape)
+    if shape == "Cone":
         return [1,"Enter the radius: ","Enter the height: "]
-    elif shape == "Pyramid" or "pyramid":
+    elif shape == "Pyramid":
         return [2,"Enter the length: ","Enter the width: ","Enter the height: "]
-    elif shape == "Cube" or "cube":
+    elif shape == "Cube":
         return [3,"Enter the side length: "]
-    elif shape == "Rectangular Prism" or "retangular prism":
+    elif shape == "Rectangular Prism":
         return [4,"Enter the width: ","Enter the height: ","Enter the length: "]
-    elif shape == "Triangular Prism" or "triangular prism":
+    elif shape == "Triangular Prism":
         return [5,"Enter base side A: ","Enter base side B: ","Enter base side C: ","Enter the height: "]
-    elif shape == "Cylinder" or "cylinder":
+    elif shape == "Cylinder":
         return [6,"Enter the radius: ","Enter the height: "]
     else:
         return [0,"Invalid shape, try again"]
+
 
 def getInputs(prompts):
     # Will prompt the user for inputs for the shape they want.
@@ -76,6 +78,7 @@ def getInputs(prompts):
     # output parameter: return a list containing all the measurements of the shape
     #Author: Peter
     measurments = []
+    print(prompts)
     if prompts[0]==1:
         for x in range (2):
             measurments.append(int(input(prompts[x+1])))
@@ -118,5 +121,5 @@ def main():
     #authors: Peter, Catrina, Kenji
     title()
     instructions()
-    print(calc(getInputs(getParams()), getParams()))
+    print(round(calc(getInputs(getParams()), getParams()),2))
 main()
