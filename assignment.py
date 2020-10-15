@@ -97,7 +97,7 @@ def getInputs(prompts):
     return measurments
 
 def calc(x,y):
-    # AUthor: Peter
+    # Author: Peter
     if y[0]==1:
             return math.pi * (x[0]**2) * (x[1]/3)
     elif y[0]==2:
@@ -115,6 +115,7 @@ def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
+    #authors: Peter, Catrina, Kenji
     title()
     instructions()
     print(calc(getInputs(getParams()), getParams()))
