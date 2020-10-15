@@ -81,31 +81,34 @@ def getInputs(prompts):
     if prompts[0]==1:
         measurments[0]=1
         for x in range (2):
-            measurments.append(int(input(prompts[x+1])))
+            measurments.append(float(input(prompts[x+1])))
     elif  prompts[0]==2:
         measurments[0]=2
         for x in range (3):
-            measurments.append(int(input(prompts[x+1])))
+            measurments.append(float(input(prompts[x+1])))
     elif  prompts[0]==3:
         measurments[0]=3
-        measurments.append(int(input(prompts[1])))
+        measurments.append(float(input(prompts[1])))
     elif  prompts[0]==4:
         measurments[0]=4
         for x in range (3):
-            measurments.append(int(input(prompts[x+1])))
+            measurments.append(float(input(prompts[x+1])))
     elif  prompts[0]==5:
-        measurments[0]=4
+        measurments[0]=5
         for x in range (4):
-            measurments.append(int(input(prompts[x+1])))
+            measurments.append(float(input(prompts[x+1])))
     elif  prompts[0]==6:
         measurments[0]=6
         for x in range (2):
-            measurments.append(int(input(prompts[x+1])))
+            measurments.append(float(input(prompts[x+1])))
+    elif prompts[0] == 0:
+        print(prompts[1])
+        measurments[0] = "Heck up"
     return measurments
 
 def calc(x):
     # Author: Peter
-    #Moditfier: Catrina
+    #Moditfier: Catrina,Kenji
     if x[0]==1:
         return math.pi * (x[1]**2) * (x[2]/3)
     elif x[0]==2:
@@ -115,10 +118,11 @@ def calc(x):
     elif x[0]==4:
             return x[1]* x[2]* x[3]
     elif x[0]==5:
-        for x in range (4):
            return (1/4*x[4])*math.sqrt((-x[1]**4) + (2*(x[1]*x[2])**2) + (2*(x[1]*x[3])**2) - x[2]**4 + (2*(x[2]*x[3])**2) - x[3]**4)
     elif x[0]==6:
            return math.pi*(x[1]**2)*x[2]
+    elif x[0]=="Heck up":
+        return None
 
 def main():
     # main block of code that will run your program and control program flow
@@ -127,6 +131,17 @@ def main():
     #authors: Peter, Catrina, Kenji
     title()
     instructions()
-    print("The voulme is",round(calc(getInputs(getParams())),2))
+    while True:
+        joe = calc(getInputs(getParams()))
+        if joe == None:
+            pass
+        else:
+            print("The voulme is", round(joe,2))
+            c = input("Do you want to quit? ") 
+            if c == "Yes" or c == "yes":
+                print("Good Bye!")
+                break
+            else:
+                pass
     
 main()
