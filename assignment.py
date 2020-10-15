@@ -54,7 +54,6 @@ def getParams():
     #Modifier: Catrina
     print("\nPossible shapes: Cone, Pyramid, Cube, Rectangular prism, Triangular prism, Cylinder\nMake sure everything is spelled correctly and capitalize!")
     shape = input("Enter a shape: ").strip()
-    print(shape)
     if shape == "Cone":
         return [1,"Enter the radius: ","Enter the height: "]
     elif shape == "Pyramid":
@@ -79,7 +78,6 @@ def getInputs(prompts):
     # output parameter: return a list containing all the measurements of the shape
     #Author: Peter
     measurments = []
-    print(prompts)
     if prompts[0]==1:
         for x in range (2):
             measurments.append(int(input(prompts[x+1])))
@@ -87,7 +85,6 @@ def getInputs(prompts):
         for x in range (3):
            measurments.append(int(input(prompts[x+1])))
     elif  prompts[0]==3:
-        for x in range (1):
            measurments.append(int(input(prompts[x+1])))
     elif  prompts[0]==4:
         for x in range (3):
