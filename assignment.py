@@ -92,10 +92,10 @@ def getInputs(prompts):
     elif  prompts[0]==6:
         for x in range (2):
            measurments.append(int(input(prompts[x+1])))
-    print(measurments)
     return measurments,prompts
 
 def calc(x):
+<<<<<<< HEAD
     #Authors: Catrina, Peter, Kenji
     pass
 
@@ -109,12 +109,39 @@ def calcCube(x):
 
 def calcCylinder(x):
     return math.pi*(x[0]**2)*x[1]
+=======
+    # AUthor: Peter
+    if prompts[0]==1:
+        for x in range (2):
+            return math.pi * (x[0]**2) * (x[1]/3)
+    elif  prompts[0]==2:
+        for x in range (3):
+           (x[0]* x[1]* x[2])/3
+    elif  prompts[0]==3:
+        for x in range (1):
+           return x**3
+    elif  prompts[0]==4:
+        for x in range (3):
+            x[0]* x[1]* x[2]
+    elif  prompts[0]==5:
+        for x in range (4):
+           (1/4*h)*math.sqrt((-x[0]**4)+2*(x[0]*x[1]))
+    elif  prompts[0]==6:
+        for x in range (2):
+           return math.pi*(x[0]**2)*x[1]
+>>>>>>> bce987a54b0479aa8eef370f260bcc6fbf826407
 
 def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
+<<<<<<< HEAD
     title()
     instructions()
     getInputs(getParams())
+=======
+    #title()
+    #instructions()
+    calc(getInputs(getParams()))
+>>>>>>> bce987a54b0479aa8eef370f260bcc6fbf826407
 main()
