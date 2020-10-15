@@ -52,7 +52,7 @@ def getParams():
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: Kenji
     #Modifier: Catrina
-    print("\nPossible shapes: cone, pyramid, cube, rectangular prism, triangular prism, cylinder\nMake sure everything is spelled correctly!")
+    print("\nPossible shapes: Cone, Pyramid, Cube, Rectangular prism, Triangular prism, Cylinder\nMake sure everything is spelled correctly and capitalize!")
     shape = input("Enter a shape: ").strip()
     if shape == "Cone":
         return [1,"Enter the radius: ","Enter the height: "]
@@ -99,12 +99,14 @@ def getInputs(prompts):
 
 def calc(x,y):
     # Author: Peter
+    #Moditfier: Catrina
     if y[0]==1:
-            return math.pi * (x[0]**2) * (x[1]/3)
+        return math.pi * (x[0]**2) * (x[1]/3)
     elif y[0]==2:
-           return (x[0]* x[1]* x[2])/3
+        return (x[0]* x[1]* x[2])/3
     elif y[0]==3:
-           return x**3
+        cal = x**3
+        return cal
     elif y[0]==4:
             return x[0]* x[1]* x[2]
     elif y[0]==5:
@@ -120,5 +122,6 @@ def main():
     #authors: Peter, Catrina, Kenji
     title()
     instructions()
-    print(round(calc(getInputs(getParams()), getParams()),2))
+    print(round(calc(getInputs(getParams())),2))
+    
 main()
