@@ -114,7 +114,7 @@ def calc(x,y):
             x[0]* x[1]* x[2]
     elif y[0]==5:
         for x in range (4):
-           (1/4*x[3])*math.sqrt((-x[0]**4)+2*(x[0]*x[1]))
+           return (1/4*x[3])*math.sqrt((-x[0]**4) + (2*(x[0]*x[1])**2) + (2*(x[0]*x[2])**2) - x[1]**4 + (2*(x[1]*x[2])**2) - x[2]**4)
     elif y[0]==6:
         for x in range (2):
            return math.pi*(x[0]**2)*x[1]
