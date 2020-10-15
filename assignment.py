@@ -99,29 +99,23 @@ def getInputs(prompts):
 def calc(x,y):
     # AUthor: Peter
     if y[0]==1:
-        for x in range (2):
             return math.pi * (x[0]**2) * (x[1]/3)
     elif y[0]==2:
-        for x in range (3):
-           (x[0]* x[1]* x[2])/3
+           return (x[0]* x[1]* x[2])/3
     elif y[0]==3:
-        for x in range (1):
            return x**3
     elif y[0]==4:
-        for x in range (3):
-            x[0]* x[1]* x[2]
+            return x[0]* x[1]* x[2]
     elif y[0]==5:
-        for x in range (4):
            (1/4*x[3])*math.sqrt((-x[0]**4)+2*(x[0]*x[1]))
     elif y[0]==6:
-        for x in range (2):
            return math.pi*(x[0]**2)*x[1]
 
 def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
-    #title()
-    #instructions()
+    title()
+    instructions()
     print(calc(getInputs(getParams()), getParams()))
 main()
