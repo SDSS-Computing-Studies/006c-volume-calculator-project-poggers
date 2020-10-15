@@ -96,12 +96,15 @@ def getInputs(prompts):
     return measurments,prompts
 
 def calc(x):
+    #Authors: Catrina, Peter, Kenji
 
 def calcCone(x):
-    return math.pi * (x[0]**2) * (x[1]/3)
+    calc = math.pi * (x[0]**2) * (x[1]/3)
+    return calc
 
 def calcCube(x):
-    return x**3
+    calc = x**3
+    return calc
 
 def calcCylinder(x):
     return math.pi*(x[0]**2)*x[1]
