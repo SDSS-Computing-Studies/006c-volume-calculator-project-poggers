@@ -77,43 +77,48 @@ def getInputs(prompts):
     # input parameter: list containing the prompts/questions
     # output parameter: return a list containing all the measurements of the shape
     #Author: Peter
-    measurments = []
+    measurments = [0]
     if prompts[0]==1:
+        measurments[0]=1
         for x in range (2):
             measurments.append(int(input(prompts[x+1])))
     elif  prompts[0]==2:
+        measurments[0]=2
         for x in range (3):
-           measurments.append(int(input(prompts[x+1])))
+            measurments.append(int(input(prompts[x+1])))
     elif  prompts[0]==3:
-           measurments.append(int(input(prompts[x+1])))
+        measurments[0]=3
+        measurments.append(int(input(prompts[1])))
     elif  prompts[0]==4:
+        measurments[0]=4
         for x in range (3):
             measurments.append(int(input(prompts[x+1])))
     elif  prompts[0]==5:
+        measurments[0]=4
         for x in range (4):
-           measurments.append(int(input(prompts[x+1])))
+            measurments.append(int(input(prompts[x+1])))
     elif  prompts[0]==6:
+        measurments[0]=6
         for x in range (2):
-           measurments.append(int(input(prompts[x+1])))
+            measurments.append(int(input(prompts[x+1])))
     return measurments
 
-def calc(x,y):
+def calc(x):
     # Author: Peter
     #Moditfier: Catrina
-    if y[0]==1:
-        return math.pi * (x[0]**2) * (x[1]/3)
-    elif y[0]==2:
-        return (x[0]* x[1]* x[2])/3
-    elif y[0]==3:
-        cal = x**3
-        return cal
-    elif y[0]==4:
-            return x[0]* x[1]* x[2]
-    elif y[0]==5:
+    if x[0]==1:
+        return math.pi * (x[1]**2) * (x[2]/3)
+    elif x[0]==2:
+        return (x[1]* x[2]* x[3])/3
+    elif x[0]==3:
+        return x[1]**3
+    elif x[0]==4:
+            return x[1]* x[2]* x[3]
+    elif x[0]==5:
         for x in range (4):
-           return (1/4*x[3])*math.sqrt((-x[0]**4) + (2*(x[0]*x[1])**2) + (2*(x[0]*x[2])**2) - x[1]**4 + (2*(x[1]*x[2])**2) - x[2]**4)
-    elif y[0]==6:
-           return math.pi*(x[0]**2)*x[1]
+           return (1/4*x[4])*math.sqrt((-x[1]**4) + (2*(x[1]*x[2])**2) + (2*(x[1]*x[3])**2) - x[2]**4 + (2*(x[2]*x[3])**2) - x[3]**4)
+    elif x[0]==6:
+           return math.pi*(x[1]**2)*x[2]
 
 def main():
     # main block of code that will run your program and control program flow
@@ -122,6 +127,6 @@ def main():
     #authors: Peter, Catrina, Kenji
     title()
     instructions()
-    print(round(calc(getInputs(),getParams())),2))
+    print("The voulme is",round(calc(getInputs(getParams())),2))
     
 main()
