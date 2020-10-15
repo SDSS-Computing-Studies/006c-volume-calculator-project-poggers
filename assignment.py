@@ -51,13 +51,14 @@ def getParams():
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: Kenji
+    #Modifier: Catrina
     print("\nPossible shapes: cone, pyramid, cube, rectangular prism, triangular prism, cylinder\nMake sure everything is spelled correctly!")
     shape = input("Enter a shape: ")
     if shape == "Cone" or "cone":
         return [1,"Enter the radius: ","Enter the height: "]
     elif shape == "Pyramid" or "pyramid":
         return [2,"Enter the length: ","Enter the width: ","Enter the height: "]
-    elif shape == "Cube" or "cube":
+    if shape == "Cube" or "cube":
         return [3,"Enter the side length: "]
     elif shape == "Rectangular Prism" or "retangular prism":
         return [4,"Enter the width: ","Enter the height: ","Enter the length: "]
@@ -117,7 +118,7 @@ def main():
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
     #authors: Peter, Catrina, Kenji
-    title()
-    instructions()
+    #title()
+    #instructions()
     print(calc(getInputs(getParams()), getParams()))
 main()
