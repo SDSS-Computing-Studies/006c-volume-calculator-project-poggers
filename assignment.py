@@ -29,13 +29,15 @@ def instructions():
         print("Step 2: You will be prompted to enter the necessary parameters for the shape. ")
         print("Step 3: You will be asked to confirm your measurements.")
         print("Step 4: The program will run and you will be given the area of your shape.")
-        print("Do you wish to continue?")
+        print("\nDo you wish to continue?")
         x = input("Yes or No: " ).strip()
-        if x is "No":
-            y = input("Would you like to replay the instructions?")
-            if y is "Yes":
+        if x == "No" or x =="no":
+            y = input("Would you like to replay the instructions? ").strip()
+            if y == "Yes" or  y =="yes":
                 continue
-        else:
+            elif y == "no" or y == "No":
+                break
+        elif x == "yes" or x =="Yes":
             break
 
                 
@@ -49,19 +51,19 @@ def getParams():
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: Kenji
-    print("Possible shapes: cone, pyramid, cube, rectangular prism, triangular prism, cylinder\nMake sure everything is spelled correctly!")
+    print("\nPossible shapes: cone, pyramid, cube, rectangular prism, triangular prism, cylinder\nMake sure everything is spelled correctly!")
     shape = input("Enter a shape: ")
-    if shape == "Cone":
+    if shape == "Cone" or "cone":
         return [1,"Enter the radius: ","Enter the height: "]
-    elif shape == "Pyramid":
+    elif shape == "Pyramid" or "pyramid":
         return [2,"Enter the length: ","Enter the width: ","Enter the height: "]
-    elif shape == "Cube":
+    elif shape == "Cube" or "cube":
         return [3,"Enter the side length: "]
-    elif shape == "Rectangular Prism":
+    elif shape == "Rectangular Prism" or "retangular prism":
         return [4,"Enter the width: ","Enter the height: ","Enter the length: "]
-    elif shape == "Triangular Prism":
+    elif shape == "Triangular Prism" or "triangular prism":
         return [5,"Enter base side A: ","Enter base side B: ","Enter base side C: ","Enter the height: "]
-    elif shape == "Cylinder":
+    elif shape == "Cylinder" or "cylinder":
         return [6,"Enter the radius: ","Enter the height: "]
     else:
         return [0,"Invalid shape, try again"]
