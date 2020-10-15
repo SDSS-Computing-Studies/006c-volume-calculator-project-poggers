@@ -51,6 +51,7 @@ def getParams():
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: Kenji
+    #Modifier: Catrina
     print("\nPossible shapes: cone, pyramid, cube, rectangular prism, triangular prism, cylinder\nMake sure everything is spelled correctly!")
     shape = input("Enter a shape: ").strip()
     print(shape)
@@ -110,7 +111,8 @@ def calc(x,y):
     elif y[0]==4:
             return x[0]* x[1]* x[2]
     elif y[0]==5:
-           (1/4*x[3])*math.sqrt((-x[0]**4)+2*(x[0]*x[1]))
+        for x in range (4):
+           return (1/4*x[3])*math.sqrt((-x[0]**4) + (2*(x[0]*x[1])**2) + (2*(x[0]*x[2])**2) - x[1]**4 + (2*(x[1]*x[2])**2) - x[2]**4)
     elif y[0]==6:
            return math.pi*(x[0]**2)*x[1]
 
