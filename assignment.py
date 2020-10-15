@@ -51,17 +51,17 @@ def getParams():
     # Author: Kenji
     print("Possible shapes: cone, pyramid, cube, rectangular prism, triangular prism, cylinder\nMake sure everything is spelled correctly!")
     shape = input("Enter a shape: ")
-    if shape == "Cone":
+    if shape == "Cone" or "cone":
         return [1,"Enter the radius: ","Enter the height: "]
-    elif shape == "Pyramid":
+    elif shape == "Pyramid" or "pyramid":
         return [2,"Enter the length: ","Enter the width: ","Enter the height: "]
-    elif shape == "Cube":
+    elif shape == "Cube" or "cube":
         return [3,"Enter the side length: "]
-    elif shape == "Rectangular Prism":
+    elif shape == "Rectangular Prism" or "retangular prism":
         return [4,"Enter the width: ","Enter the height: ","Enter the length: "]
-    elif shape == "Triangular Prism":
+    elif shape == "Triangular Prism" or "triangular prism":
         return [5,"Enter base side A: ","Enter base side B: ","Enter base side C: ","Enter the height: "]
-    elif shape == "Cylinder":
+    elif shape == "Cylinder" or "cylinder":
         return [6,"Enter the radius: ","Enter the height: "]
     else:
         return [0,"Invalid shape, try again"]
@@ -97,6 +97,7 @@ def getInputs(prompts):
 
 def calc(x):
     #Authors: Catrina, Peter, Kenji
+    pass
 
 def calcCone(x):
     calc = math.pi * (x[0]**2) * (x[1]/3)
@@ -115,4 +116,5 @@ def main():
     # the user chooses to exit
     title()
     instructions()
+    getInputs(getParams())
 main()
