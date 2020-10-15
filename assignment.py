@@ -110,7 +110,7 @@ def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
-    #title()
-    #instructions()
+    title()
+    instructions()
     getInputs(getParams())
 main()
