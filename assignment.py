@@ -60,9 +60,9 @@ def getParams():
         return [2,"Enter the length: ","Enter the width: ","Enter the height: "]
     elif shape == "Cube":
         return [3,"Enter the side length: "]
-    elif shape == "Rectangular Prism":
+    elif shape == "Rectangular prism":
         return [4,"Enter the width: ","Enter the height: ","Enter the length: "]
-    elif shape == "Triangular Prism":
+    elif shape == "Triangular prism":
         return [5,"Enter base side A: ","Enter base side B: ","Enter base side C: ","Enter the height: "]
     elif shape == "Cylinder":
         return [6,"Enter the radius: ","Enter the height: "]
