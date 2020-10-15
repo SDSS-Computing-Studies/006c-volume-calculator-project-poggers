@@ -29,13 +29,15 @@ def instructions():
         print("Step 2: You will be prompted to enter the necessary parameters for the shape. ")
         print("Step 3: You will be asked to confirm your measurements.")
         print("Step 4: The program will run and you will be given the area of your shape.")
-        print("Do you wish to continue?")
+        print("\nDo you wish to continue?")
         x = input("Yes or No: " ).strip()
-        if x is "No":
-            y = input("Would you like to replay the instructions?")
-            if y is "Yes":
+        if x == "No" or x =="no":
+            y = input("Would you like to replay the instructions? ").strip()
+            if y == "Yes" or  y =="yes":
                 continue
-        else:
+            elif y == "no" or y == "No":
+                break
+        elif x == "yes" or x =="Yes":
             break
 
                 
@@ -49,7 +51,7 @@ def getParams():
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
     # Author: Kenji
-    print("Possible shapes: cone, pyramid, cube, rectangular prism, triangular prism, cylinder\nMake sure everything is spelled correctly!")
+    print("\nPossible shapes: cone, pyramid, cube, rectangular prism, triangular prism, cylinder\nMake sure everything is spelled correctly!")
     shape = input("Enter a shape: ")
     if shape == "Cone" or "cone":
         return [1,"Enter the radius: ","Enter the height: "]
@@ -95,21 +97,6 @@ def getInputs(prompts):
     return measurments,prompts
 
 def calc(x):
-<<<<<<< HEAD
-    #Authors: Catrina, Peter, Kenji
-    pass
-
-def calcCone(x):
-    calc = math.pi * (x[0]**2) * (x[1]/3)
-    return calc
-
-def calcCube(x):
-    calc = x**3
-    return calc
-
-def calcCylinder(x):
-    return math.pi*(x[0]**2)*x[1]
-=======
     # AUthor: Peter
     if prompts[0]==1:
         for x in range (2):
@@ -129,19 +116,12 @@ def calcCylinder(x):
     elif  prompts[0]==6:
         for x in range (2):
            return math.pi*(x[0]**2)*x[1]
->>>>>>> bce987a54b0479aa8eef370f260bcc6fbf826407
 
 def main():
     # main block of code that will run your program and control program flow
     # You will need to include a while loop to keep repeating the commands until
     # the user chooses to exit
-<<<<<<< HEAD
     title()
     instructions()
-    getInputs(getParams())
-=======
-    #title()
-    #instructions()
     calc(getInputs(getParams()))
->>>>>>> bce987a54b0479aa8eef370f260bcc6fbf826407
 main()
