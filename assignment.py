@@ -125,6 +125,6 @@ def main():
     #authors: Peter, Catrina, Kenji
     title()
     instructions()
-    print(round(calc(getInputs(getParams())),2))
+    print(round(calc(getInputs(),getParams())),2))
     
 main()
