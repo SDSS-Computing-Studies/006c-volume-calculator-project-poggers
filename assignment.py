@@ -97,13 +97,13 @@ def getInputs(prompts):
 
 def calc(x):
 
-def cone(x):
+def calcCone(x):
     return math.pi * (x[0]**2) * (x[1]/3)
 
-def cube(x):
+def calcCube(x):
     return x**3
 
-def Cylinder(x):
+def calcCylinder(x):
     return math.pi*(x[0]**2)*x[1]
 
 def main():
@@ -112,5 +112,4 @@ def main():
     # the user chooses to exit
     title()
     instructions()
-    getInputs(getParams())
 main()
