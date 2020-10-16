@@ -10,10 +10,11 @@ def getParams
     one of the lists with instructions and an identifying number at the start.
 
 def getInputs
-
+    Uses the fist number in the return string from getParams to decide how many inputs are needed then aks for those inputs 
+    as well as setting an identifier for the calc function. If the parameters are invalid it recoiseze that and dosen't ask for any inputs
 
 def calc
-
+    uses the Indentifier and numbers from get inputs to calculate the volume. 
 
 def main
     The main program that does stuff
