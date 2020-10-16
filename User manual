@@ -5,7 +5,9 @@ def instructions
 
 
 def getParams
-    Figures out which shape the user wants to calculate
+    Figures out which shape the user wants to calculate.
+    It asks the user which shape from the list they want to calculate and takes their response and outputs
+    one of the lists with instructions and an identifying number at the start.
 
 def getInputs
 
