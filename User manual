@@ -1,1 +1,17 @@
-lll
+def title
+
+
+def instructions
+
+
+def getParams
+    Figures out which shape the user wants to calculate
+
+def getInputs
+
+
+def calc
+
+
+def main
+    The main program that does stuff
