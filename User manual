@@ -17,4 +17,7 @@ def calc
     uses the Indentifier and numbers from get inputs to calculate the volume. 
 
 def main
-    The main program that does stuff
+    Main calls for the title function and instructions function. 
+    After that it calls to return getParams into getInputs into calc. 
+    It then prints the answer and asks the user if they want to continue. 
+    If they do want to continue it will send them back to pick a shape, otherwise it will end the program.
