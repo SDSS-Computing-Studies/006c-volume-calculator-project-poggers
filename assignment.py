@@ -102,6 +102,7 @@ def getInputs(prompts):
         for x in range (2):
             measurments.append(float(input(prompts[x+1])))
     elif prompts[0] == 0:
+        # If the shape is wrong
         print(prompts[1])
         measurments[0] = "Heck up"
     return measurments
@@ -110,18 +111,25 @@ def calc(x):
     # Author: Peter
     #Moditfier: Catrina,Kenji
     if x[0]==1:
+        #Cone
         return math.pi * (x[1]**2) * (x[2]/3)
     elif x[0]==2:
+        #Pyramid
         return (x[1]* x[2]* x[3])/3
     elif x[0]==3:
+        #Cube
         return x[1]**3
     elif x[0]==4:
-            return x[1]* x[2]* x[3]
+        #Rectangular prism
+        return x[1]* x[2]* x[3]
     elif x[0]==5:
-           return (1/4*x[4])*math.sqrt((-x[1]**4) + (2*(x[1]*x[2])**2) + (2*(x[1]*x[3])**2) - x[2]**4 + (2*(x[2]*x[3])**2) - x[3]**4)
+        #Triangular prism
+        return (1/4*x[4])*math.sqrt((-x[1]**4) + (2*(x[1]*x[2])**2) + (2*(x[1]*x[3])**2) - x[2]**4 + (2*(x[2]*x[3])**2) - x[3]**4)
     elif x[0]==6:
-           return math.pi*(x[1]**2)*x[2]
+        #Cylinder
+        return math.pi*(x[1]**2)*x[2]
     elif x[0]=="Heck up":
+        # If the shape is wrong
         return None
 
 def main():
