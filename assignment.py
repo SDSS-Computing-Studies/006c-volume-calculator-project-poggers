@@ -144,7 +144,7 @@ def main():
         if joe == None:
             pass
         else:
-            print("The voulume is", round(joe,2))
+            print("The volume is", round(joe,2))
             c = input("Do you want to quit? ") 
             if c == "Yes" or c == "yes":
                 print("Good Bye!")
