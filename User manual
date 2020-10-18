@@ -1,8 +1,13 @@
 def title
+    The title welcomes the user to the program.
+    It shows the creators of the volume program.
 
 
 def instructions
-
+    In our instructions, it lists the four steps to for the calculator.
+    It also asks whether the user would like to continue straight to the calculator.
+    If the user is unsure, it will ask to replay the instructions.
+    Once everything is sorted out, it will bring you to the calculator.
 
 def getParams
     Figures out which shape the user wants to calculate.
